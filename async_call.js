@@ -7,7 +7,7 @@ const url='https://zelda.fanapis.com/api/games'
 let r = request(url ,
                 {json: true}, 
                 (error, respuesta, body) => {
-                        let games = body
+                        let games = body.data
                         games.forEach((game) => {
                             console.log(game.name)
                             console.log('---------')
